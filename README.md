@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Cloudflare Deployment (Workers)
+
+Use these commands in Cloudflare project settings:
+
+- Build command: `npm run build`
+- Deploy command: `npx opennextjs-cloudflare deploy --dangerouslyUseUnsupportedNextVersion`
+
+Notes:
+
+- `npm run build` runs `next build` and then generates OpenNext artifacts in `.open-next`.
+- The dangerous flag is required while staying on `next@14.2.35`.

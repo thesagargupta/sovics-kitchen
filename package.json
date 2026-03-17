@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:cf": "opennextjs-cloudflare build --dangerouslyUseUnsupportedNextVersion",
-    "preview": "opennextjs-cloudflare build --dangerouslyUseUnsupportedNextVersion && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build --dangerouslyUseUnsupportedNextVersion && opennextjs-cloudflare deploy",
+    "postbuild": "opennextjs-cloudflare build --skipNextBuild --dangerouslyUseUnsupportedNextVersion",
+    "build:cf": "npm run build",
+    "preview": "npm run build && opennextjs-cloudflare preview",
+    "deploy": "npm run build && opennextjs-cloudflare deploy --dangerouslyUseUnsupportedNextVersion",
     "start": "next start",
     "lint": "next lint"
   },
