@@ -9,6 +9,7 @@
     "build:cf": "npm run build",
     "preview": "npm run build && opennextjs-cloudflare preview",
     "deploy": "npm run build && opennextjs-cloudflare deploy --dangerouslyUseUnsupportedNextVersion",
+    "upload": "npm run build && opennextjs-cloudflare upload --dangerouslyUseUnsupportedNextVersion",
     "start": "next start",
     "lint": "next lint"
   },
